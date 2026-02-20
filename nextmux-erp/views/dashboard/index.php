@@ -10,26 +10,26 @@
   <div class="col-6 col-md-3">
     <div class="card p-3 text-center h-100" style="border-left:4px solid #1d4ed8">
       <div class="text-muted" style="font-size:0.68rem;text-transform:uppercase;letter-spacing:1px">Total facturé</div>
-      <div class="fs-3 fw-bold text-primary"><?= number_format($total_facture, 0, ',', ' ') ?> €</div>
+      <div class="fs-3 fw-bold text-primary"><?= number_format($total_facture, 0, ',', ' ') ?> Fcfa</div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card p-3 text-center h-100" style="border-left:4px solid #15803d">
       <div class="text-muted" style="font-size:0.68rem;text-transform:uppercase;letter-spacing:1px">Encaissé</div>
-      <div class="fs-3 fw-bold text-success"><?= number_format($total_paye, 0, ',', ' ') ?> €</div>
+      <div class="fs-3 fw-bold text-success"><?= number_format($total_paye, 0, ',', ' ') ?> Fcfa</div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card p-3 text-center h-100" style="border-left:4px solid #b91c1c">
       <div class="text-muted" style="font-size:0.68rem;text-transform:uppercase;letter-spacing:1px">Dépenses</div>
-      <div class="fs-3 fw-bold text-danger"><?= number_format($total_depenses, 0, ',', ' ') ?> €</div>
+      <div class="fs-3 fw-bold text-danger"><?= number_format($total_depenses, 0, ',', ' ') ?> Fcfa</div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card p-3 text-center h-100" style="border-left:4px solid <?= $marge >= 0 ? '#15803d' : '#b91c1c' ?>">
       <div class="text-muted" style="font-size:0.68rem;text-transform:uppercase;letter-spacing:1px">Marge nette</div>
       <div class="fs-3 fw-bold <?= $marge >= 0 ? 'text-success' : 'text-danger' ?>">
-        <?= number_format($marge, 0, ',', ' ') ?> €
+        <?= number_format($marge, 0, ',', ' ') ?> Fcfa
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
             </div>
             <div class="text-end">
               <div class="fw-semibold text-warning" style="font-size:0.875rem">
-                <?= number_format($f['montant_ttc'] - $f['total_paye'], 2, ',', ' ') ?> €
+                <?= number_format($f['montant_ttc'] - $f['total_paye'], 2, ',', ' ') ?> Fcfa
               </div>
               <div style="font-size:0.72rem;color:#aaa"><?= date('d/m/Y', strtotime($f['date_emission'])) ?></div>
             </div>
