@@ -20,7 +20,7 @@
 <?php $total = array_sum(array_column($depenses, 'montant')); ?>
 <div class="card mb-3 text-center p-3" style="max-width:250px">
   <div class="text-muted" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px">Total dépenses</div>
-  <div class="fs-3 fw-bold text-danger"><?= number_format($total, 2, ',', ' ') ?> €</div>
+  <div class="fs-3 fw-bold text-danger"><?= number_format($total, 2, ',', ' ') ?> Fcfa</div>
 </div>
 
 <div class="card">
@@ -45,7 +45,7 @@
           <td class="text-muted" style="font-size:0.85rem">
             <?= $d['projet_nom'] ? htmlspecialchars($d['projet_nom']) : '<span class="text-muted">—</span>' ?>
           </td>
-          <td class="fw-semibold text-danger"><?= number_format($d['montant'], 2, ',', ' ') ?> €</td>
+          <td class="fw-semibold text-danger"><?= number_format($d['montant'], 2, ',', ' ') ?> Fcfa</td>
           <td class="text-end">
             <a href="index.php?module=depenses&action=edit&id=<?= $d['id'] ?>"
                class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></a>
